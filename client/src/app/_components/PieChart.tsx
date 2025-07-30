@@ -1,6 +1,6 @@
 'use client';
 
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer,    } from 'recharts';
 
 import {
 	ChartConfig,
@@ -58,7 +58,7 @@ function ChartComponent() {
 			</ChartContainer>
 			<div className='flex justify-start w-full flex-col gap-y-2'>
 				{chartData.map((item) => (
-					<div className='flex  items-start gap-x-2'>
+					<div key={item.name} className='flex  items-start gap-x-2'>
 						<div className={`w-4 h-4  `} style={{ backgroundColor: item.color }} />
 						<p className='text-sm font-semibold'>{item.name}</p>
                         <p className=' font-medium text-muted-foreground'>- ${item.amount}</p>

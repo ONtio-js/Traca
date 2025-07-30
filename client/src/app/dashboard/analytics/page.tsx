@@ -1,6 +1,6 @@
 import Doughnotchart from '@/app/_components/Doughnotchart';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, TrendingDown, TrendingUp } from 'lucide-react';
+import { TrendingDown, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
 
 const page = () => {

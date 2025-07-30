@@ -19,6 +19,7 @@ import { Badge } from '@/components/ui/badge';
 import { CalendarIcon, RefreshCw } from 'lucide-react';
 import React, { useState } from 'react';
 import { DayButton } from 'react-day-picker';
+import Image from 'next/image';
 
 interface Product {
 	id: number;
@@ -29,7 +30,7 @@ interface Product {
 	status: 'active' | 'cancelled';
 }
 
-const page = () => {
+const Page = () => {
 	const [selectedDate, setSelectedDate] = useState<Date | undefined>(
 		new Date()
 	);
@@ -143,7 +144,9 @@ const page = () => {
 								className='flex items-center gap-1 px-2 py-1 bg-blue-500/20 rounded text-xs font-medium text-blue-300'
 								title={`${product.name} - $${product.amount}`}
 							>
-								<img
+								<Image
+									width={16}
+									height={16}
 									src={product.icon}
 									alt={product.name}
 									className='w-4 h-4 rounded'
@@ -236,7 +239,9 @@ const page = () => {
 													key={product.id}
 													className='flex items-center gap-2 p-2 bg-slate-700/50 rounded'
 												>
-													<img
+													<Image
+														width={24}
+														height={24}
 														src={product.icon}
 														alt={product.name}
 														className='w-6 h-6 rounded'
@@ -291,13 +296,12 @@ const page = () => {
 											<SelectItem
 												key={product.id}
 												value={product.name}
-                                                className='hover:bg-sidebar'
-                                                style={{
-                                                    
-                                                }}
+												className='hover:bg-sidebar'
 											>
 												<div className='flex items-center gap-2 text-white'>
-													<img
+													<Image
+														width={16}
+														height={16}
 														src={product.icon}
 														alt={product.name}
 														className='w-4 h-4 rounded'
@@ -360,7 +364,9 @@ const page = () => {
 											className='flex items-center justify-between p-2 bg-slate-700/30 rounded'
 										>
 											<div className='flex items-center gap-2'>
-												<img
+												<Image
+													width={24}
+													height={24}
 													src={product.icon}
 													alt={product.name}
 													className='w-6 h-6 rounded'
@@ -390,4 +396,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;

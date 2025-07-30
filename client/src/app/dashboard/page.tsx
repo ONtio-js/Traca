@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React from 'react'
 import PieChart from '../_components/PieChart';
 
-const page = () => {
+const Page = () => {
     const subscriptions = [
         {
             id: 1,
@@ -96,7 +96,7 @@ const page = () => {
                 <h4 className='font-semibold text-2xl mb-10'>Active Subscriptions</h4>
                 <div className='flex flex-col gap-y-7'>
                     {subscriptions.map((subscription) => (
-                    <div className='flex justify-between items-center hover:bg-slate-800/60 hover:cursor-pointer rounded-lg  p-4 bg-slate-900/80 transition-all duration-300 hover:scale-102 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-1'>
+                    <div key={subscription.id} className='flex justify-between items-center hover:bg-slate-800/60 hover:cursor-pointer rounded-lg  p-4 bg-slate-900/80 transition-all duration-300 hover:scale-102 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-1'>
                         <div className='flex items-center gap-x-2'>
                             <Image src={subscription.icon} width={40} height={40} alt={subscription.name} className='rounded-lg' />
                             <div>
@@ -116,4 +116,4 @@ const page = () => {
   );
 }
 
-export default page
+export default Page;

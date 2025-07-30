@@ -1,5 +1,5 @@
 'use client';
-import { Calendar, Home, Inbox,ChartAreaIcon,BookAlertIcon , LogOut, Search, Settings } from 'lucide-react';
+import { Calendar, Home, Inbox,ChartAreaIcon,BookAlertIcon , LogOut, Settings } from 'lucide-react';
 
 import {
 	Sidebar,
@@ -7,10 +7,8 @@ import {
 	SidebarFooter,
 	SidebarGroup,
 	SidebarGroupContent,
-	SidebarGroupLabel,
 	SidebarHeader,
 	SidebarMenu,
-	SidebarMenuButton,
 	SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import Logo from './Logo';
